@@ -13,8 +13,8 @@
     "tus"
   ],
   "author": "Etienne Bruines <e.bruines@q-mex.net>",
-  "license": "UNLICENSED",
-  "private": true,
+  "license": "MIT",
+  "private": false,
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.14.0",
     "@typescript-eslint/parser": "^2.14.0",
