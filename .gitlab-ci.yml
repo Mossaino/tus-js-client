@@ -1,0 +1,28 @@
+stages:
+  - test
+
+cache:
+  paths:
+    - .npm
+
+variables:
+  npm_config_cache: "$CI_PROJECT_DIR/.npm"
+
+before_script:
+  - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+
+lint and build:
+  stage: test
+  image: node:alpine
+  before_script:
+    # Install dependencies
+    - npm ci
+  script:
+    # Generate distribution
+    - npm run build
+    # linting to test code quality
+    - npm run lint
+    # security audit for npm-installed packages
+    - npm audit
+    # Run tests
+    #- npm run test
