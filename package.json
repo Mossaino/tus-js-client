@@ -1,5 +1,5 @@
 {
-  "name": "tus-js-client",
+  "name": "tus-js-client-fetch",
   "version": "1.8.1",
   "description": "tus-js-client using fetch instead of XHR",
   "main": "src/index.ts",
